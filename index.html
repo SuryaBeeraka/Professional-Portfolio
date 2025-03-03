@@ -79,107 +79,49 @@
 
         <!--==================== MAIN ====================-->
         <main class="main">
-            <!--==================== HOME ====================-->
-            <section class="home section" id="home">
-                <div class="home__container container grid section__border">
-                    <div class="home__data grid">
-                        <h1 class="home__title">
-                            Hi, I’m Venkata Sai Surya Rao Beeraka <br>
-                        </h1>
+<!--==================== HOME ====================-->
+<section class="home section" id="home">
+    <div class="home__container container grid section__border">
+        <!-- Profile Image -->
+        <div class="home__blob">
+            <div class="home__perfil">
+                <img src="assets/img/ProfilePic.jpg" alt="Profile Picture">
+            </div>
+            <!-- Social Links Below Profile Picture -->
+            <div class="home__social">
+                <a href="https://www.linkedin.com/in/saisuryabeeraka/" target="_blank" class="home__social-link">
+                    <i class="ri-linkedin-box-line"></i>
+                </a>
+                <a href="https://github.com/SuryaBeeraka" target="_blank" class="home__social-link">
+                    <i class="ri-github-line"></i>
+                </a>
+            </div>
+        </div>
 
-                        <div class="home__blob grid">
-                            <div class="home__perfil">
-                                <img src="assets/img/ProfilePic.jpg" alt="">
-                            </div>
+        <!-- Biography & Resume Section -->
+        <div class="home__data">
+            <h3 class="home__info-title">BIOGRAPHY</h3>
+            <p class="home__info-description">
+                Technology has always been a driving force in my life, shaping my curiosity and passion for problem-solving. With a strong foundation in backend engineering, data processing, 
+                and system optimization, I am constantly exploring ways to enhance performance and streamline complex workflows. I am currently pursuing a Master’s in Computer Science at the University of Illinois at Chicago. My professional experience includes working as a Software Engineer at Carelon Global Solutions (Elevance Health), 
+                where I focused on developing backend solutions, optimizing database management, and implementing scalable system enhancements to improve efficiency.
+            </p>
+            <p class="home__info-description">
+                Outside of work, I am dedicated to fitness and weight training, always pushing my limits and embracing new challenges. I believe in discipline, adaptability, and continuous self-improvement, 
+                principles that drive both my professional and personal growth. Whether refining technical skills or setting new fitness milestones, I strive for excellence in everything I do. 
+            </p>
 
-                            <img src="assets/img/shape-wawes.svg" alt="" class="home__shape-wawes">
-                            <img src="assets/img/shape-circle.svg" alt="" class="home__shape-circle">
-                        </div>
 
-                        <ul class="home__social">
-                            <a href="https://www.linkedin.com/in/saisuryabeeraka/" target="_blank" class="home__social-link">
-                                <i class="ri-linkedin-box-line"></i>
-                            </a>
-
-                            <a href="https://github.com/SuryaBeeraka" target="_blank" class="home__social-link">
-                                <i class="ri-github-line"></i>
-                            </a>
-
-                        </ul>
-                    </div>
-
-                    <!--==================== HOME INFO 1 ====================-->
-                    <div class="home__info">
-                        <div>
-                            <h3 class="home__info-title">
-                                BIOGRAPHY
-                            </h3>
-                            
-                            <p class="home__info-description">
-                                Hi, I'm Venkata Sai Surya Rao Beeraka, Software Development Engineer.
-                                Passionate about building scalable and user-friendly applications with modern technologies.
-                            </p>
-                        </div>
-
-                        <div>
-                            <h3 class="home__info-title">
-                                CONTACT
-                            </h3>
-
-                            <p class="home__info-description">
-                                saisurya.beeraka@gmail.com <br>
-                                +1 312-669-4463 <br>
-                            </p>
-                        </div>
-
-                        <div>
-                            <h3 class="home__info-title">
-                                Resume
-                            </h3>
-
-                            <p class="home__info-description">
-                                <a href="assets/resume.pdf" download class="resume__button">
-                                    <i class="ri-download-line"></i> Download Resume
-                                </a>
-                            </p>
-                        </div>
-                    </div>
-                    
-                    <!--==================== HOME INFO 2 ====================-->
-                    <div class="home__info">
-                        <div>
-                            <h3 class="home__info-title">
-                                YEARS OF EXPERIENCE
-                            </h3>
-
-                            <p class="home__info-number">
-                                02
-                            </p>
-                        </div>
-
-                        <div>
-                            <h3 class="home__info-title">
-                                COMPLETED PROJECTS
-                            </h3>
-
-                            <p class="home__info-number">
-                                6+
-                            </p>
-                        </div>
-
-                        <div>
-                            <h3 class="home__info-title">
-                                COMPANIES WORKED
-                            </h3>
-
-                            <p class="home__info-number">
-                                01
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
+            <!-- Resume Download -->
+            <div class="resume__section">
+                <h3 class="home__info-title">RESUME</h3>
+                <a href="assets/SuryaBeeraka_Resume.pdf" download class="resume__button">
+                    <i class="ri-download-line"></i> Download Resume
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
             <!--==================== SKILLS ====================-->
 <section class="skills section" id="skills">
     <h2 class="section__title">Skills</h2>
@@ -229,9 +171,27 @@
                 </div>
                 <div class="skills__data">
                     <div class="skills__blob">
-                        <img src="assets/img/mysql.svg" alt="HTML">
+                        <img src="assets/img/node-js.svg" alt="React">
                     </div>
-                    <h3 class="skills__name">MySQL</h3>
+                    <h3 class="skills__name">Node.js</h3>
+                </div>
+                <div class="skills__data">
+                    <div class="skills__blob">
+                        <img src="assets/img/MSSQL.svg" alt="HTML">
+                    </div>
+                    <h3 class="skills__name">Microsoft SQL Server</h3>
+                </div>
+                <div class="skills__data">
+                    <div class="skills__blob">
+                        <img src="assets/img/mongodb.svg" alt="HTML">
+                    </div>
+                    <h3 class="skills__name">MongoDB</h3>
+                </div>
+                <div class="skills__data">
+                    <div class="skills__blob">
+                        <img src="assets/img/RDS.svg" alt="HTML">
+                    </div>
+                    <h3 class="skills__name">Amazon RDS</h3>
                 </div>
                 <div class="skills__data">
                     <div class="skills__blob">
@@ -304,57 +264,77 @@
                     </div>
                     <h3 class="skills__name">Bitbucket</h3>
                 </div>
+                <div class="skills__data">
+                    <div class="skills__blob">
+                        <img src="assets/img/soapui.svg" alt="Bitbucket">
+                    </div>
+                    <h3 class="skills__name">SoapUI</h3>
+                </div>
             </div>
         </div>
     </div>
 </section>
 
 <!--==================== QUALIFICATION ====================-->
-
-<section class="qualification section " id="qualification">
+<section class="qualification section" id="qualification">
     <div class="container section__border">
     <h2 class="section__title">Qualification</h2>
-    <span class="section__subtitle">Experience & Education</span>
+    <span class="section__subtitle">Education & Experience</span>
 
-    <div class="qualification__container container">
+    <div class="qualification__container">
         <!--==================== EDUCATION ====================-->
-        <div class="qualification__education">
-            <h3 class="qualification__title"><i class="ri-pencil-ruler-2-line"></i> Education</h3>
-            <div class="qualification__info education__grid">
-                <div class="qualification__data">
+        <div class="qualification__column">
+            <h3 class="qualification__title">EDUCATION</h3>
+            <div class="qualification__timeline">
+                <div class="qualification__content">
+                    <span class="qualification__circle"></span>
+                    <span class="qualification__year">2023 - 2025</span>
                     <h3 class="qualification__name">Masters in Computer Science</h3>
                     <span class="qualification__institution">University of Illinois at Chicago</span>
-                    <span class="qualification__year">2023 - 2025</span>
                 </div>
-                <div class="qualification__data">
+                <div class="qualification__content">
+                    <span class="qualification__circle"></span>
+                    <span class="qualification__year">2017 - 2021</span>
                     <h3 class="qualification__name">Bachelors in Computer Science</h3>
                     <span class="qualification__institution">Jain University - India</span>
-                    <span class="qualification__year">2017 - 2021</span>
                 </div>
             </div>
         </div>
 
         <!--==================== WORK EXPERIENCE ====================-->
-        <div class="qualification__work">
-            <h3 class="qualification__title"><i class="ri-building-line"></i> Work Experience</h3>
-            <div class="qualification__info">
-                <div class="qualification__data">
+        <div class="qualification__column">
+            <h3 class="qualification__title">EXPERIENCE</h3>
+            <div class="qualification__timeline">
+                <div class="qualification__content qualification__equal-box">
+                    <span class="qualification__circle"></span>
+                    <span class="qualification__year">Febuary 2023 - July 2023</span>
                     <h3 class="qualification__name">Software Engineer</h3>
-                    <span class="qualification__institution">Carelon Global Solutions</span>
-                    <span class="qualification__year">2021 - 2023</span>
+                    <span class="qualification__institution">Carelon Global Solutions (Elevance Health)</span>
                     <ul class="qualification__description">
-                        <li>Spearheaded the successful delivery of a new product streamlining broker onboarding processes in the health industry, reducing turnaround time from <strong>14 days to just 1 business day</strong> through strategic automation.</li>
-                        <li>Engineered permanent solutions for Workday issues, reducing <strong>45 hours per week</strong> in manual effort and implemented robust <strong>database objects (T-SQL, SSIS, stored procedures, functions, and jobs)</strong> for efficient data access.</li>
-                        <li>Collaborated with cross-functional partners to conduct <strong>in-depth root cause analysis of production incidents</strong>, implementing preventive measures that <strong>reduced incident frequency by 35%</strong>.</li>
-                        <li>Modernized and optimized existing <strong>code bases</strong>, aligning enhancements with <strong>current development standards</strong>, improving overall system functionality.</li>
-                        <li>Played a key role in a multidisciplinary team, providing valuable support in <strong>data collection, processing</strong>, and collaborating with engineering and research staff.</li>
-                        <li>Delivered a <strong>critical payment impact list</strong>, ensuring adherence to regulatory and financial compliance requirements.</li>
+                        <li>Developed an automated broker onboarding system, reducing turnaround time and improving healthcare operations.</li>
+                        <li>Engineered backend solutions using modern frameworks to optimize data processing workflows, significantly reducing manual effort.</li>
+                        <li>Designed and optimized database workflows, ensuring scalability, performance, and faster response times. </li>
+                            <li>Worked closely with cross-functional teams to enhance data collection, processing, and critical business solutions aligned with compliance standards.</li>
+                    </ul>
+                </div>
+                <div class="qualification__content qualification__equal-box">
+                    <span class="qualification__circle"></span>
+                    <span class="qualification__year">September 2021 - Febuary 2023</span>
+                    <h3 class="qualification__name">Assosiate Software Engineer</h3>
+                    <span class="qualification__institution">Carelon Global Solutions (Elevance Health)</span>
+                    <ul class="qualification__description">
+                        <li>Conducted comprehensive API testing to ensure application functionality, security, and performance.  </li>
+                        <li>Monitored and troubleshot batch jobs, 
+                            proactively identifying and resolving issues to maintain seamless operational workflows.</li>
+                        <li>Assisted in optimizing backend processes, 
+                            improving system efficiency, and ensuring reliability in enterprise applications.</li>
                     </ul>
                 </div>
             </div>
         </div>
-    </div> 
     </div>
+</div>
+
 
     <!-- IMAGE MOVED TO LEFT -->
     <img src="assets/img/shape-circle.svg" alt="qualification image" class="qualification__img">
@@ -382,6 +362,10 @@
                                 </div>
                                 <div>
                                     <h1 class="projects__title">Comprehensive Analysis of EPL Match Data</h1>
+                                    <!-- GitHub Link with Icon -->
+                                    <a href="https://github.com/SuryaBeeraka/Comprehensive-Analysis-of-EPL-Match-Data" target="_blank" class="projects__github">
+                                        <i class="ri-github-line"></i> View on GitHub
+                                    </a>
                                 </div>
                             </div>
                                 
@@ -399,6 +383,10 @@
                                 </div>
                                 <div>
                                     <h1 class="projects__title">Sentiment Analysis of Political Tweets</h1>
+                                    <!-- GitHub Link with Icon -->
+                                    <a href="https://github.com/SuryaBeeraka/Sentiment-Analysis-of-Political-Tweets" target="_blank" class="projects__github">
+                                        <i class="ri-github-line"></i> View on GitHub
+                                    </a>
                                 </div>
                             </div>
     
@@ -416,6 +404,10 @@
                                 </div>
                                 <div>
                                     <h1 class="projects__title">Drowsiness detection System</h1>
+                                    <!-- GitHub Link with Icon -->
+                                    <a href="https://github.com/yourgithubrepo" target="_blank" class="projects__github">
+                                        <i class="ri-github-line"></i> View on GitHub
+                                    </a>
                                 </div>
                             </div>
     
@@ -433,12 +425,16 @@
                                 </div>
                                 <div>
                                     <h1 class="projects__title">UI Health Project: Vaccine Registration System</h1>
+                                    <!-- GitHub Link with Icon -->
+                                    <a href="https://github.com/yourgithubrepo" target="_blank" class="projects__github">
+                                        <i class="ri-github-line"></i> View on GitHub
+                                    </a>
                                 </div>
                             </div>
                             <!--==================== PROJECT 5 ====================-->
                             <div class="projects__content swiper-slide">
                                 <div class="project__image-container">
-                                    <img src="assets/img/DDS.jpg" alt="Sentiment Analysis of Political Tweets" class="projects__img">
+                                    <img src="assets/img/MB.jpg" alt="Sentiment Analysis of Political Tweets" class="projects__img">
                                     <div class="project__overlay">
                                         <p class="project__description">
                                             Designed and developed a mentorship platform facilitating seamless connections between students and industry professionals. 
@@ -448,6 +444,10 @@
                                 </div>
                                 <div>
                                     <h1 class="projects__title">MentorBridge</h1>
+                                    <!-- GitHub Link with Icon -->
+                                    <a href="https://github.com/yourgithubrepo" target="_blank" class="projects__github">
+                                        <i class="ri-github-line"></i> View on GitHub
+                                    </a>
                                 </div>
                             </div>
                         </div>

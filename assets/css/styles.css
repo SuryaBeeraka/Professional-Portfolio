@@ -293,38 +293,29 @@ body.dark-theme {
   color: var(--title-color);
 }
 
-/*=============== HOME ===============*/
+/*=============== HOME SECTION ===============*/
 .home__container {
-  row-gap: 4rem;
+  display: grid;
+  grid-template-columns: 1fr 2fr; /* Increase right-side space */
+  align-items: center;
+  gap: 1rem;
   padding-top: 2rem;
+  width: 100%;
 }
 
-.home__data {
-  row-gap: 1.5rem;
-}
-
-.home__title {
-  text-align: center;
-  font-size: var(--biggest-font-size);
-  letter-spacing: .3px;
-  margin-bottom: .5rem;
-}
-
+/* Profile Image & Social Links */
 .home__blob {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
   position: relative;
-  width: 200px;
-  height: 290px;
-  background-color: var(--body-color);
-  border: 2px solid var(--text-color-light);
-  justify-self: center;
-  border-radius: 6.25rem;
-  place-items: center;
-  transition: background .4s; /* for dark mode animation */
 }
 
 .home__perfil {
-  width: 170px;
-  height: 260px;
+  width: 220px;
+  height: 290px;
   background: var(--gradient-color);
   border-radius: 5.5rem;
   overflow: hidden;
@@ -334,74 +325,79 @@ body.dark-theme {
 }
 
 .home__perfil img {
-  width: 150px;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
-.home__shape-wawes, 
-.home__shape-circle {
-  position: absolute;
-  opacity: .1;
-}
-
-.home__shape-wawes {
-  width: 50px;
-  left: -1.5rem;
-  top: 5rem;
-}
-
-.home__shape-circle {
-  width: 150px;
-  bottom: -2rem;
-  right: -3rem;
-  transform: rotate(15deg);
-  z-index: -1;
-}
-
+/* Social Links Below Profile */
 .home__social {
-  justify-self: center;
   display: flex;
-  column-gap: 1.25rem;
+  gap: 1rem;
+  margin-top: 1rem;
 }
 
 .home__social-link {
-  font-size: 1.25rem;
-  color: var(--text-color-light);
-  transition: color .3s;
+  font-size: 1.5rem;
+  color: var(--title-color);
+  transition: color 0.3s;
 }
 
 .home__social-link:hover {
-  color: var(--title-color);
+  color: var(--text-color-dark);
 }
 
-.home__info {
-  display: grid;
-  row-gap: 2rem;
+/* Biography & Resume Section */
+.home__data {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;  /* Keeps proper spacing */
+  text-align: left;
+  width: 100%; /* Make full use of available space */
+  max-width: 100%; /* Extends text further */
 }
 
 .home__info-title {
-  font-family: var(--body-font);
-  font-size: var(--smaller-font-size);
-  font-weight: 400;
-  color: var(--text-color-light);
-  margin-bottom: 1rem;
-}
-
-.home__info-description, 
-.home__info-number {
-  font-family: var(--title-font);
+  font-size: 1.2rem;
+  font-weight: bold;
   color: var(--title-color);
+  text-transform: uppercase;
 }
 
 .home__info-description {
-  padding-right: 4rem;
+  width: 100%;
+  max-width: 100%;
+  line-height: 1.6; /* Keeps readability */
+  margin-bottom: 0.8rem;
+  word-spacing: 1px; /* Slightly reduce space between words */
+  letter-spacing: 0.3px; /* Adjust character spacing */
 }
 
-.home__info-number {
-  font-size: var(--h1-font-size);
-  font-weight: var(--font-semi-bold);
+@media (max-width: 1024px) {
+  .home__container {
+      grid-template-columns: 1fr; /* Stack layout on smaller screens */
+      text-align: center;
+  }
+
+  .home__data {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    text-align: left;
+    width: 100%;
+    max-width: 95%;
+    padding-right: 2rem; /* Add padding to push text toward the right */
+}
 }
 
-
+/* Resume Section */
+.resume__section {
+  margin-top: 1rem; /* Reduced gap */
+}
+.resume__section h3 {
+  margin-bottom: 0.75rem; /* Adds space between heading and button */
+}
+/* Resume Button */
 .resume__button {
   display: inline-flex;
   align-items: center;
@@ -423,6 +419,21 @@ body.dark-theme {
   opacity: 0.5; /* Make it dull instead of vanishing */
 }
 
+/* Responsive Design */
+@media (max-width: 768px) {
+  .home__container {
+      grid-template-columns: 1fr;
+      text-align: center;
+  }
+
+  .home__blob {
+      order: -1;
+  }
+
+  .home__info {
+      text-align: center;
+  }
+}
 /*=============== SKILLS ===============*/
 .skills__container {
   row-gap: 2.5rem;
@@ -530,29 +541,101 @@ body.dark-theme {
 /* Main container */
 .qualification__container {
   display: flex;
-  flex-direction: column;
-  align-items: center; /* Center the content */
+  justify-content: center;
+  gap: 4rem;
   max-width: 900px;
   margin: 0 auto;
+  position: relative;
 }
 
-/* Align Education side by side */
-.education__grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 2rem;
-  justify-content: center;
-  text-align: center;
+/* Each Column (Education & Experience) */
+.qualification__column {
+  position: relative;
+  width: 50%;
 }
 
+/* Titles for Education & Experience */
 .qualification__title {
   font-size: 1.5rem;
   font-weight: bold;
+  text-align: center;
   margin-bottom: 1rem;
 }
-.qualification__work {
-  margin-top: 3rem !important;  /* Adjust the value as needed */
+
+/* Timeline Container */
+.qualification__timeline {
+  position: relative;
+  padding-left: 2rem;
 }
+
+/* Vertical Timeline Line */
+.qualification__timeline::before {
+  content: "";
+  position: absolute;
+  left: 10px; /* Align with the bullet points */
+  top: 0;
+  width: 3px;
+  height: 100%;
+  background-color: var(--text-color-light);
+  z-index: -1;
+}
+
+/* Timeline Dots (Properly Aligned on the Line) */
+.qualification__circle {
+  width: 12px;
+  height: 12px;
+  background-color: var(--title-color);
+  border-radius: 50%;
+  position: absolute;
+  left: -58px; /* Move exactly onto the line */
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+/* Card Styling */
+.qualification__content {
+  padding: 1.5rem;
+  background: var(--container-color);
+  border-radius: 8px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  position: relative;
+  margin-bottom: 2rem;
+  transition: transform 0.3s ease-in-out;
+  margin-left: 2rem; /* Push the card away from the line */
+  text-align: left; /* Ensuring text inside the card is left-aligned */
+}
+/* Card Styling */
+.qualification__content {
+  padding: 1.5rem;
+  background: var(--container-color);
+  border-radius: 8px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  position: relative;
+  margin-bottom: 2rem;
+  transition: transform 0.3s ease-in-out;
+  margin-left: 2rem; /* Push the card away from the line */
+  text-align: left; /* Ensuring text inside the card is left-aligned */
+}
+/* Equal Box Size for Experience */
+.qualification__equal-box {
+  min-height: 180px;
+}
+
+/* Add margin between timeline & text */
+.qualification__year {
+  font-size: 0.9rem;
+  font-weight: bold;
+  color: var(--primary-color);
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+/* Card Hover Effect */
+.qualification__content:hover {
+  transform: translateY(-5px);
+}
+
+/* Name & Institution */
 .qualification__name {
   font-size: 1.2rem;
   font-weight: bold;
@@ -562,26 +645,20 @@ body.dark-theme {
 .qualification__institution {
   font-size: 1rem;
   color: var(--text-color-light);
-  margin-bottom: 0.2rem;
 }
 
-.qualification__year {
-  font-size: 0.9rem;
-  color: var(--text-color-light);
-}
-
-/* Work Experience */
-.qualification__info {
-  text-align: center;
-}
-
+/* Experience List */
 .qualification__description {
   font-size: 0.9rem;
   color: var(--text-color);
-  text-align: left;
   list-style-type: disc;
-  padding-left: 1.5rem;
+  padding-left: 1rem;
   margin-top: 0.5rem;
+}
+
+/* Remove extra bottom line */
+.qualification__timeline .qualification__content:last-child::after {
+  display: none;
 }
 
 /* Move Image to Left */
@@ -594,18 +671,25 @@ body.dark-theme {
   opacity: 0.3; /* Keep it light */
 }
 
-/* REMOVE BOXES AND BACKGROUNDS */
-.qualification__container,
-.qualification__info {
-  background: transparent;
-  border: none;
-  box-shadow: none;
-}
-
-/* Responsive for Mobile */
+/* Responsive Design */
 @media (max-width: 768px) {
-  .education__grid {
-    grid-template-columns: 1fr;
+  .qualification__container {
+      flex-direction: column;
+      align-items: center;
+      gap: 3rem;
+  }
+
+  .qualification__column {
+      width: 100%;
+      padding-left: 1rem;
+  }
+
+  .qualification__timeline::before {
+      left: 15px;
+  }
+
+  .qualification__circle {
+      left: 10px;
   }
 
   .qualification__img {
@@ -617,7 +701,6 @@ body.dark-theme {
     max-width: 100%;
     padding: 0 1rem;
   }
-
 }
 /*=============== PROJECTS ===============*/
 .projects__container {
@@ -780,7 +863,22 @@ body.dark-theme {
   object-fit: cover; /* Ensures image fills the space */
   border-radius: 10px; /* Keeps images rounded if needed */
 }
+/* GitHub Link Styling */
+.projects__github {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #000 !important; /* Set to black */
+  text-decoration: none;
+}
 
+.projects__github i {
+  font-size: 1.2rem;
+  color: #000 !important; /* Icon is also black */
+}
 
 /*=============== CONTACT ===============*/
 .contact__container {

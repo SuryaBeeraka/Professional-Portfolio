@@ -175,12 +175,12 @@ window.addEventListener('scroll', scrollHeader)
 const sr = ScrollReveal({
   origin: 'top',
   distance: '60px',
-  duration: 2500,
-  delay: 400,
+  duration: 1600,
+  delay: 210,
   // reset: true // Animations repeat
 })
 sr.reveal(`.skills__container`, {origin: 'top'});
-sr.reveal(`.skill__group`, {interval: 100});
+sr.reveal(`.skill__group`, {interval: 50});
 sr.reveal(`.skill__item`, {interval: 100, origin: 'bottom'});
 
 sr.reveal(`.home__data, .projects__container, .testimonial__container, .footer__container`)

@@ -179,9 +179,13 @@ const sr = ScrollReveal({
   delay: 400,
   // reset: true // Animations repeat
 })
+sr.reveal(`.skills__container`, {origin: 'top'});
+sr.reveal(`.skill__group`, {interval: 100});
+sr.reveal(`.skill__item`, {interval: 100, origin: 'bottom'});
 
 sr.reveal(`.home__data, .projects__container, .testimonial__container, .footer__container`)
 sr.reveal(`.home__info div`, {delay: 600, origin: 'bottom', interval: 100})
 sr.reveal(`.skills__content:nth-child(1), .contact__content:nth-child(1)`, {origin: 'left'})
 sr.reveal(`.skills__content:nth-child(2), .contact__content:nth-child(2)`, {origin: 'right'})
 sr.reveal(`.qualification, .qualification__container, .qualification__content`, {interval: 100});
+sr.reveal(`.certifications__content`, { delay: 200, origin: 'bottom', interval: 100 });
